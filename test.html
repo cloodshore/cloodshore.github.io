@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Simple HTML Page</title>
+    <title>Another Page</title>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is a simple HTML page.</p>
+    <h1>Another Page</h1>
+
+    <p>: <span id="shared-variable-display"></span></p>
+
+    <script>
+        // Access the shared variable and display it on this page
+        var sharedVariableDisplay = document.getElementById("shared-variable-display");
+        sharedVariableDisplay.textContent = sharedVariable;
+    </script>
 </body>
 </html>
