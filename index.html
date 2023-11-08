@@ -1,7 +1,45 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Change Color Button</title>
+    <style>
+        /* Define the initial button style */
+        #colorButton {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Define a different style for the button when it's pressed */
+        #colorButton:hover {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <button id="colorButton" onclick="changeColor()">Change Color</button>
+
+    <script>
+        function changeColor() {
+            // Get a reference to the button
+            var button = document.getElementById("colorButton");
+
+            // Generate a random color and set it as the button's background color
+            var randomColor = getRandomColor();
+            button.style.backgroundColor = randomColor;
+        }
+
+        function getRandomColor() {
+            // Generate a random color in the format "#RRGGBB"
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
 </body>
 </html>
