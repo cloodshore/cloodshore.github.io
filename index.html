@@ -9,10 +9,14 @@
     <!-- Create a button with an anchor tag that links to the destination URL -->
     <a href="https://cloodshore.github.io/test.html">
         <button>Click to Redirect</button>
+        <button>Click</button>
     </a>
     <script>
+        function AddNum() {
+            sharedVariable = sharedVariable + 1
+        }
         // Define and set a variable in the index.html
-        var sharedVariable = "This is a shared variable.";
+        var sharedVariable = 0;
         
         // Store the variable in localStorage for persistence across pages
         localStorage.setItem('sharedVariable', sharedVariable);
