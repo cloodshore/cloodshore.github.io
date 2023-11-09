@@ -4,7 +4,7 @@
     <title>Redirect Button</title>
 </head>
 <body>
-    <h1>Welcome t My Website</h1>
+    <h1>Welcome to My Website</h1>
 
     <!-- Create a button with an anchor tag that links to the destination URL -->
     <a href="https://cloodshore.github.io/test.html">
@@ -13,13 +13,12 @@
     <button onClick="AddNum()"> Click</button>
     <script>
         function AddNum() {
-            localStorage.setItem('sharedVariable', localStorage.getItem('sharedVariable') + 1);
+            sharedVariable = localStorage.getItem('sharedVariable')
+            localStorage.setItem('sharedVariable', ++sharedVariable);
         }
-        // Define and set a variable in the index.html
-        var sharedVariable = 0;
         
         // Store the variable in localStorage for persistence across pages
-        localStorage.setItem('sharedVariable', sharedVariable);
+        localStorage.setItem('sharedVariable', 0);
     </script>
 </body>
 </html>
